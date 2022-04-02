@@ -17,6 +17,17 @@ public class Patient {
     @ColumnInfo(name = "patientId")
     private int patientId;
 
+
+    @Nullable
+    public String getDepartment() {
+        return department;
+    }
+
+    @Nullable
+    public String getRoom() {
+        return room;
+    }
+
     //FK
     @ColumnInfo(name = "nurseId")
     private int nurseId;
@@ -35,5 +46,19 @@ public class Patient {
     @ColumnInfo(name = "room")
     private String room;
 
+    public int getPatientId() {
+        return patientId;
+    }
 
+    public int getNurseId() {
+        return nurseId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
 }

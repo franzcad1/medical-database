@@ -44,4 +44,30 @@ public class Test {
     @ColumnInfo(name = "temperature")
     private String temperature;
 
+    public int getTestId() {
+        return testId;
+    }
+
+    public int getPatientId() {
+        return patientId;
+    }
+
+    public int getNurseId() {
+        return nurseId;
+    }
+
+    @Nullable
+    public String getBPL() {
+        return BPL;
+    }
+
+    @Nullable
+    public String getBPH() {
+        return BPH;
+    }
+
+    @Nullable
+    public String getTemperature() {
+        return temperature;
+    }
 }
