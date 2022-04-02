@@ -70,4 +70,28 @@ public class Test {
     public String getTemperature() {
         return temperature;
     }
+
+    public void setTestId(int testId) {
+        this.testId = testId;
+    }
+
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
+    }
+
+    public void setNurseId(int nurseId) {
+        this.nurseId = nurseId;
+    }
+
+    public void setBPL(@Nullable String BPL) {
+        this.BPL = BPL;
+    }
+
+    public void setBPH(@Nullable String BPH) {
+        this.BPH = BPH;
+    }
+
+    public void setTemperature(@Nullable String temperature) {
+        this.temperature = temperature;
+    }
 }

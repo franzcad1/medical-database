@@ -3,13 +3,20 @@ package com.example.yiseulko_franzcadiente_comp304sec003_lab05_ex1;
 import android.app.Application;
 
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
 
 public class NurseRepository {
     private NurseDao nurseDao;
-
     private LiveData<List<Nurse>> allNurses;
+
+    private MutableLiveData<Integer> insertSuccessful = new MutableLiveData<>();
+
+    public LiveData<Integer> getInsertSuccessful() {
+        return insertSuccessful;
+    }
+
 
     public NurseRepository(Application application){
         AppDatabase db = AppDatabase.getInstance(application);
@@ -18,7 +25,7 @@ public class NurseRepository {
     }
 
     public void insert(Nurse nurse){
-
+        insertAsync(nurse);
     }
 
     public LiveData<List<Nurse>> getAllNurses(){
@@ -32,9 +39,9 @@ public class NurseRepository {
             public void run() {
                 try {
                     nurseDao.insert(nurse);
-                    //insertResult.postValue(1);
+                    insertSuccessful.postValue(1);
                 } catch (Exception e) {
-                    //insertResult.postValue(0);
+                    insertSuccessful.postValue(0);
                 }
             }
         }).start();

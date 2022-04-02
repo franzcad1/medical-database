@@ -61,4 +61,28 @@ public class Patient {
     public String getLastName() {
         return lastName;
     }
+
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
+    }
+
+    public void setNurseId(int nurseId) {
+        this.nurseId = nurseId;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setDepartment(@Nullable String department) {
+        this.department = department;
+    }
+
+    public void setRoom(@Nullable String room) {
+        this.room = room;
+    }
 }

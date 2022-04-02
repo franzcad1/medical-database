@@ -12,12 +12,19 @@ public class NurseViewModel extends AndroidViewModel
 {
     private NurseRepository nurseRepository;
     private LiveData<List<Nurse>> allNurses;
+    private LiveData<Integer> insertSuccessful;
+
+    public LiveData<Integer> getInsertSuccessful() {
+        return insertSuccessful;
+    }
 
     public NurseViewModel(@NonNull Application application) {
         super(application);
 
         nurseRepository=new NurseRepository(application);
         allNurses = nurseRepository.getAllNurses();
+
+        insertSuccessful = nurseRepository.getInsertSuccessful();
     }
 
     public void insert(Nurse nurse){
