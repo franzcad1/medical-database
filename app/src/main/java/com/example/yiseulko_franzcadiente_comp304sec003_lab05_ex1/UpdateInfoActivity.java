@@ -1,6 +1,7 @@
 package com.example.yiseulko_franzcadiente_comp304sec003_lab05_ex1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -54,25 +55,50 @@ public class UpdateInfoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final Integer patientIdToUpdate = Integer.parseInt(editTextPatientId.getText().toString());
 
-                patientViewModel.getAllPatients().observe(UpdateInfoActivity.this, new Observer<List<Patient>>() {
-                    @Override
-                    public void onChanged(List<Patient> patients) {
+                Patient updatedPatient = new Patient(patientIdToUpdate,
+                        Integer.parseInt(editTextNurseId.getText().toString()),
+                        editTextFirstName.getText().toString(),
+                        editTextLastName.getText().toString(),
+                        editTextDepartment.getText().toString(),
+                        editTextRoom.getText().toString()
+                        );
+                patientViewModel.update(updatedPatient);
 
-                        for(Patient p : patients){
-                            if(p.getPatientId() == patientIdToUpdate){
-                                p.setFirstName(editTextFirstName.getText().toString());
-                                p.setLastName(editTextLastName.getText().toString());
-                                p.setDepartment(editTextDepartment.getText().toString());
-                                p.setRoom(editTextRoom.getText().toString());
+//                LiveData<List<Patient>> allPatients = patientViewModel.getAllPatients();
 
-                                patientViewModel.update(p);
+//                for(Patient p : (List<Patient>)allPatients){
+//                    if(p.getPatientId() == patientIdToUpdate){
+//                        p.setFirstName(editTextFirstName.getText().toString());
+//                        p.setLastName(editTextLastName.getText().toString());
+//                        p.setDepartment(editTextDepartment.getText().toString());
+//                        p.setRoom(editTextRoom.getText().toString());
+//
+//                        patientViewModel.update(p);
+//
+//                        break;
+//                    }
+//                }
 
-                                break;
-                            }
 
-                        }
-                    }
-                });
+//                patientViewModel.getAllPatients().observe(UpdateInfoActivity.this, new Observer<List<Patient>>() {
+//                    @Override
+//                    public void onChanged(List<Patient> patients) {
+//
+//                        for(Patient p : patients){
+//                            if(p.getPatientId() == patientIdToUpdate){
+//                                p.setFirstName(editTextFirstName.getText().toString());
+//                                p.setLastName(editTextLastName.getText().toString());
+//                                p.setDepartment(editTextDepartment.getText().toString());
+//                                p.setRoom(editTextRoom.getText().toString());
+//
+//                                patientViewModel.update(p);
+//
+//                                break;
+//                            }
+//
+//                        }
+//                    }
+//                });
 
             }
         });
@@ -83,6 +109,7 @@ public class UpdateInfoActivity extends AppCompatActivity {
                     Toast.makeText(UpdateInfoActivity.this, "Patient successfully updated", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), PatientListActivity.class);
                     startActivity(intent);
+                    return;
 
                 } else {
                     Toast.makeText(UpdateInfoActivity.this, "Error updating patient", Toast.LENGTH_SHORT).show();
