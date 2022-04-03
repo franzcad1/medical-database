@@ -17,17 +17,6 @@ public class Patient {
     @ColumnInfo(name = "patientId")
     private int patientId;
 
-
-    @Nullable
-    public String getDepartment() {
-        return department;
-    }
-
-    @Nullable
-    public String getRoom() {
-        return room;
-    }
-
     //FK
     @ColumnInfo(name = "nurseId")
     private int nurseId;
@@ -45,6 +34,25 @@ public class Patient {
     @Nullable
     @ColumnInfo(name = "room")
     private String room;
+
+    public Patient(int patientId, int nurseId, String firstName, String lastName, @Nullable String department, @Nullable String room) {
+        this.patientId = patientId;
+        this.nurseId = nurseId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+        this.room = room;
+    }
+
+    @Nullable
+    public String getDepartment() {
+        return department;
+    }
+
+    @Nullable
+    public String getRoom() {
+        return room;
+    }
 
     public int getPatientId() {
         return patientId;

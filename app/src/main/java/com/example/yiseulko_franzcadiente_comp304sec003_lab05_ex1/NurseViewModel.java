@@ -25,6 +25,7 @@ public class NurseViewModel extends AndroidViewModel
         allNurses = nurseRepository.getAllNurses();
 
         insertSuccessful = nurseRepository.getInsertSuccessful();
+
     }
 
     public void insert(Nurse nurse){

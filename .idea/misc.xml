@@ -6,8 +6,12 @@
         <entry key="..\:/Term004/comp304/A5/Lab5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Term004/comp304/A5/Lab5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/Term004/comp304/A5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_login.xml" value="0.23233695652173914" />
-        <entry key="..\:/Term004/comp304/A5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Term004/comp304/A5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Term004/comp304/A5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_patient.xml" value="0.1" />
+        <entry key="..\:/Term004/comp304/A5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_patient_list.xml" value="0.264" />
         <entry key="..\:/Term004/comp304/A5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Term004/comp304/A5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/activity_update_info.xml" value="0.24230072463768115" />
+        <entry key="..\:/Term004/comp304/A5/YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1/app/src/main/res/layout/patient_item.xml" value="0.264" />
       </map>
     </option>
   </component>
