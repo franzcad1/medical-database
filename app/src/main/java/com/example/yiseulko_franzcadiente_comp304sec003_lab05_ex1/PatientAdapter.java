@@ -29,7 +29,7 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientH
     public void onBindViewHolder(@NonNull PatientHolder holder, int position) {
         Patient currentPatient = patients.get(position);
 
-        holder.text_view_room.setText(currentPatient.getRoom());
+        holder.text_view_room.setText("Room: " + currentPatient.getRoom());
         holder.text_view_patientId.setText(String.valueOf(currentPatient.getPatientId()));
         holder.text_view_name.setText(currentPatient.getFirstName() + " " + currentPatient.getLastName());
     }
@@ -39,8 +39,8 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientH
         return patients.size();
     }
 
-    public void setPatients(List<Patient> notes){
-        this.patients = notes;
+    public void setPatients(List<Patient> patients){
+        this.patients = patients;
         notifyDataSetChanged();
     }
 

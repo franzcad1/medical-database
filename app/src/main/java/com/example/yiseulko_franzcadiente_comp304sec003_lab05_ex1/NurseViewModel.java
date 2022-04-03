@@ -10,7 +10,7 @@ import java.util.List;
 
 public class NurseViewModel extends AndroidViewModel
 {
-    private NurseRepository nurseRepository;
+    private NurseRepository repository;
     private LiveData<List<Nurse>> allNurses;
     private LiveData<Integer> insertSuccessful;
 
@@ -21,15 +21,15 @@ public class NurseViewModel extends AndroidViewModel
     public NurseViewModel(@NonNull Application application) {
         super(application);
 
-        nurseRepository=new NurseRepository(application);
-        allNurses = nurseRepository.getAllNurses();
+        repository =new NurseRepository(application);
+        allNurses = repository.getAllNurses();
 
-        insertSuccessful = nurseRepository.getInsertSuccessful();
+        insertSuccessful = repository.getInsertSuccessful();
 
     }
 
     public void insert(Nurse nurse){
-        nurseRepository.insert(nurse);
+        repository.insert(nurse);
     }
 
     public LiveData<List<Nurse>> getAllNurses() {

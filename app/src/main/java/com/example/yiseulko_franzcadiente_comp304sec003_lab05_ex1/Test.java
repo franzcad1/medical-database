@@ -44,6 +44,15 @@ public class Test {
     @ColumnInfo(name = "temperature")
     private String temperature;
 
+    public Test(int testId, int patientId, int nurseId, @Nullable String BPL, @Nullable String BPH, @Nullable String temperature) {
+        this.testId = testId;
+        this.patientId = patientId;
+        this.nurseId = nurseId;
+        this.BPL = BPL;
+        this.BPH = BPH;
+        this.temperature = temperature;
+    }
+
     public int getTestId() {
         return testId;
     }

@@ -10,21 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1">
         <activity
+            android:name=".TestActivity"
+            android:exported="false"
+            android:parentActivityName=".TestListActivity"/>
+        <activity
+            android:name=".TestListActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".UpdateInfoActivity"
             android:exported="false"
-            android:parentActivityName=".PatientListActivity"
-            />
+            android:parentActivityName=".PatientListActivity" />
         <activity
             android:name=".PatientListActivity"
             android:exported="false"
             android:launchMode="singleTop"
-            android:parentActivityName=".MainActivity"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PatientActivity"
             android:exported="false"
-            android:parentActivityName=".PatientListActivity"
-            />
+            android:parentActivityName=".PatientListActivity" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
@@ -40,8 +46,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:launchMode="singleTop"
-            />
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

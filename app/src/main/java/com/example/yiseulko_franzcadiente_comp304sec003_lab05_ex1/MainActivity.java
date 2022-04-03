@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void moveToTestListActivity(View view){
+        Intent intent = new Intent(this, TestListActivity.class);
+
+        startActivity(intent);
+    }
 
 
 }

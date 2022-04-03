@@ -14,6 +14,6 @@ public interface TestDao {
     void insert(Test test);
 
     @Query("SELECT * FROM test_table")
-    LiveData<List<Nurse>> getAllTests();
+    LiveData<List<Test>> getAllTests();
 
 }
