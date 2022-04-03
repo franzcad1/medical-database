@@ -40,21 +40,21 @@ public class TestListActivity extends AppCompatActivity {
         });
 
 
-//        adapter.setOnItemClickListener(new PatientAdapter.onItemClickListener() {
-//            @Override
-//            public void onItemClick(Patient patient) {
-//                Intent intent = new Intent(TestListActivity.this, UpdateInfoActivity.class);
-//
-//                intent.putExtra("patientId", patient.getPatientId());
-//                intent.putExtra("firstName", patient.getFirstName());
-//                intent.putExtra("lastName", patient.getLastName());
-//                intent.putExtra("department", patient.getDepartment());
-//                intent.putExtra("room", patient.getRoom());
-//                intent.putExtra("nurseId", patient.getNurseId());
-//
-//                startActivity(intent);
-//            }
-//        });
+        adapter.setOnItemClickListener(new TestAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(Test test) {
+                Intent intent = new Intent(TestListActivity.this, ViewTestInfoActivity.class);
+
+                intent.putExtra("patientId", test.getPatientId());
+                intent.putExtra("nurseId", test.getNurseId());
+                intent.putExtra("testId", test.getTestId());
+                intent.putExtra("temperature", test.getTemperature());
+                intent.putExtra("BPH", test.getBPH());
+                intent.putExtra("BPL", test.getBPL());
+
+                startActivity(intent);
+            }
+        });
 
 
     }
