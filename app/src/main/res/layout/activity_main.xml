@@ -4,26 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/heart_bg"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnPatientInfo"
-        android:onClick="moveToPatientListActivity"
         android:layout_width="279dp"
         android:layout_height="71dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="384dp"
+        android:onClick="moveToPatientListActivity"
         android:text="Patient Information"
+        android:backgroundTint="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnTestInfo"
-        android:onClick="moveToTestListActivity"
         android:layout_width="279dp"
         android:layout_height="71dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="60dp"
+        android:onClick="moveToTestListActivity"
         android:text="Test Information"
+        android:backgroundTint="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPatientInfo" />
