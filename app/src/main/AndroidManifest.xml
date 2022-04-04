@@ -11,7 +11,8 @@
         android:theme="@style/Theme.YiseulKo_FranzCadiente_COMP304Sec003_Lab05_Ex1">
         <activity
             android:name=".ViewTestInfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".TestListActivity"/>
         <activity
             android:name=".TestActivity"
             android:exported="false"
