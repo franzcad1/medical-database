@@ -58,12 +58,12 @@ public class TestActivity extends AppCompatActivity {
             @Override
             public void onChanged(Integer result) {
                 if (result == 1) {
-                    Toast.makeText(TestActivity.this, "Test successfully created", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TestActivity.this, "Test successfully created.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), TestListActivity.class);
                     startActivity(intent);
 
                 } else {
-                    Toast.makeText(TestActivity.this, "Error creating test", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TestActivity.this, "Error creating test: : Test Id should be unique.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

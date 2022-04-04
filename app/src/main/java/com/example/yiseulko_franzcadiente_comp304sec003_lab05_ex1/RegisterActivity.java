@@ -50,12 +50,12 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onChanged(Integer result) {
                 if (result == 1) {
-                    Toast.makeText(RegisterActivity.this, "Nurse successfully registered", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Nurse successfully registered.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     startActivity(intent);
 
                 } else {
-                    Toast.makeText(RegisterActivity.this, "Error registering nurse", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Error registering nurse: Nurse Id should be unique.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -64,49 +64,13 @@ public class UpdateInfoActivity extends AppCompatActivity {
                         );
                 patientViewModel.update(updatedPatient);
 
-//                LiveData<List<Patient>> allPatients = patientViewModel.getAllPatients();
-
-//                for(Patient p : (List<Patient>)allPatients){
-//                    if(p.getPatientId() == patientIdToUpdate){
-//                        p.setFirstName(editTextFirstName.getText().toString());
-//                        p.setLastName(editTextLastName.getText().toString());
-//                        p.setDepartment(editTextDepartment.getText().toString());
-//                        p.setRoom(editTextRoom.getText().toString());
-//
-//                        patientViewModel.update(p);
-//
-//                        break;
-//                    }
-//                }
-
-
-//                patientViewModel.getAllPatients().observe(UpdateInfoActivity.this, new Observer<List<Patient>>() {
-//                    @Override
-//                    public void onChanged(List<Patient> patients) {
-//
-//                        for(Patient p : patients){
-//                            if(p.getPatientId() == patientIdToUpdate){
-//                                p.setFirstName(editTextFirstName.getText().toString());
-//                                p.setLastName(editTextLastName.getText().toString());
-//                                p.setDepartment(editTextDepartment.getText().toString());
-//                                p.setRoom(editTextRoom.getText().toString());
-//
-//                                patientViewModel.update(p);
-//
-//                                break;
-//                            }
-//
-//                        }
-//                    }
-//                });
-
             }
         });
         patientViewModel.getUpdateSuccessful().observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(Integer result) {
                 if (result == 1) {
-                    Toast.makeText(UpdateInfoActivity.this, "Patient successfully updated", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UpdateInfoActivity.this, "Patient successfully updated.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), PatientListActivity.class);
                     startActivity(intent);
                     return;

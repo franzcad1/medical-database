@@ -63,12 +63,12 @@ public class PatientActivity extends AppCompatActivity {
             @Override
             public void onChanged(Integer result) {
                 if (result == 1) {
-                    Toast.makeText(PatientActivity.this, "Patient successfully registered", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PatientActivity.this, "Patient successfully registered.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getApplicationContext(), PatientListActivity.class);
                     startActivity(intent);
 
                 } else {
-                    Toast.makeText(PatientActivity.this, "Error registering patient", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PatientActivity.this, "Error registering patient: Patient Id should be unique.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
